@@ -126,7 +126,7 @@ while (keys.length) {
 }
 ```
 
-*Wrong:*
+*Allowed:* (and declare all vars used within the scope at the beginning)
 
 ```js
 var keys = ['foo', 'bar'],
@@ -528,7 +528,7 @@ req.on('end', function onEnd() {
 });
 ```
 
-*Wrong:*
+*Allowed:* (there might be some cases when this is not neccesary)
 
 ```js
 req.on('end', function() {
@@ -552,7 +552,7 @@ function afterConnect() {
 }
 ```
 
-*Wrong:*
+*Allowed:* (I think this should depend on the level and complexity of the nested functions (ie one short fcn like the example might be simple to read/understand than the example above))
 
 ```js
 setTimeout(function() {
